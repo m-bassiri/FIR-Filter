@@ -1,0 +1,606 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.11 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.11 secs
+ 
+--> Reading design: FIR.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "FIR.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "FIR"
+Output Format                      : NGC
+Target Device                      : xc6slx9-3-tqg144
+
+---- Source Options
+Top Module Name                    : FIR
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "C:\Users\mahdi\Desktop\dars\fpga\pro\faz2\test5\fir.v" into library work
+Parsing module <FIR>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <FIR>.
+WARNING:HDLCompiler:413 - "C:\Users\mahdi\Desktop\dars\fpga\pro\faz2\test5\fir.v" Line 47: Result of 3-bit expression is truncated to fit in 2-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\mahdi\Desktop\dars\fpga\pro\faz2\test5\fir.v" Line 66: Result of 17-bit expression is truncated to fit in 16-bit target.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <FIR>.
+    Related source file is "C:\Users\mahdi\Desktop\dars\fpga\pro\faz2\test5\fir.v".
+        SIZE = 19
+    Found 304-bit register for signal <n0073[303:0]>.
+    Found 684-bit register for signal <n0071[683:0]>.
+    Found 36-bit register for signal <sum>.
+    Found 16-bit register for signal <data_out>.
+    Found 2-bit register for signal <level>.
+    Found 2-bit adder for signal <level[1]_GND_1_o_add_21_OUT> created at line 47.
+    Found 36-bit adder for signal <n0145> created at line 63.
+    Found 36-bit adder for signal <n0148> created at line 63.
+    Found 36-bit adder for signal <n0151> created at line 63.
+    Found 36-bit adder for signal <n0154> created at line 63.
+    Found 36-bit adder for signal <n0157> created at line 63.
+    Found 36-bit adder for signal <n0160> created at line 63.
+    Found 36-bit adder for signal <n0163> created at line 63.
+    Found 36-bit adder for signal <n0166> created at line 63.
+    Found 36-bit adder for signal <n0169> created at line 63.
+    Found 36-bit adder for signal <n0172> created at line 63.
+    Found 36-bit adder for signal <n0175> created at line 63.
+    Found 36-bit adder for signal <n0178> created at line 63.
+    Found 36-bit adder for signal <n0181> created at line 63.
+    Found 36-bit adder for signal <n0184> created at line 63.
+    Found 36-bit adder for signal <n0187> created at line 63.
+    Found 36-bit adder for signal <n0190> created at line 63.
+    Found 36-bit adder for signal <n0193> created at line 63.
+    Found 36-bit adder for signal <hasel_zarb[0][35]_hasel_zarb[18][35]_add_63_OUT> created at line 63.
+    Found 16x16-bit multiplier for signal <reg_data[0][15]_coef[0][15]_MuLt_25_OUT> created at line 58.
+    Found 16x16-bit multiplier for signal <reg_data[1][15]_coef[1][15]_MuLt_26_OUT> created at line 58.
+    Found 16x16-bit multiplier for signal <reg_data[2][15]_coef[2][15]_MuLt_27_OUT> created at line 58.
+    Found 16x16-bit multiplier for signal <reg_data[3][15]_coef[3][15]_MuLt_28_OUT> created at line 58.
+    Found 16x16-bit multiplier for signal <reg_data[4][15]_coef[4][15]_MuLt_29_OUT> created at line 58.
+    Found 16x16-bit multiplier for signal <reg_data[5][15]_coef[5][15]_MuLt_30_OUT> created at line 58.
+    Found 16x16-bit multiplier for signal <reg_data[6][15]_coef[6][15]_MuLt_31_OUT> created at line 58.
+    Found 16x16-bit multiplier for signal <reg_data[7][15]_coef[7][15]_MuLt_32_OUT> created at line 58.
+    Found 16x16-bit multiplier for signal <reg_data[8][15]_coef[8][15]_MuLt_33_OUT> created at line 58.
+    Found 16x16-bit multiplier for signal <reg_data[9][15]_coef[9][15]_MuLt_34_OUT> created at line 58.
+    Found 16x16-bit multiplier for signal <reg_data[10][15]_coef[10][15]_MuLt_35_OUT> created at line 58.
+    Found 16x16-bit multiplier for signal <reg_data[11][15]_coef[11][15]_MuLt_36_OUT> created at line 58.
+    Found 16x16-bit multiplier for signal <reg_data[12][15]_coef[12][15]_MuLt_37_OUT> created at line 58.
+    Found 16x16-bit multiplier for signal <reg_data[13][15]_coef[13][15]_MuLt_38_OUT> created at line 58.
+    Found 16x16-bit multiplier for signal <reg_data[14][15]_coef[14][15]_MuLt_39_OUT> created at line 58.
+    Found 16x16-bit multiplier for signal <reg_data[15][15]_coef[15][15]_MuLt_40_OUT> created at line 58.
+    Found 16x16-bit multiplier for signal <reg_data[16][15]_coef[16][15]_MuLt_41_OUT> created at line 58.
+    Found 16x16-bit multiplier for signal <reg_data[17][15]_coef[17][15]_MuLt_42_OUT> created at line 58.
+    Found 16x16-bit multiplier for signal <reg_data[18][15]_coef[18][15]_MuLt_43_OUT> created at line 58.
+    Summary:
+	inferred  19 Multiplier(s).
+	inferred  19 Adder/Subtractor(s).
+	inferred 1042 D-type flip-flop(s).
+Unit <FIR> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Multipliers                                          : 19
+ 16x16-bit multiplier                                  : 19
+# Adders/Subtractors                                   : 19
+ 2-bit adder                                           : 1
+ 36-bit adder                                          : 18
+# Registers                                            : 5
+ 16-bit register                                       : 1
+ 2-bit register                                        : 1
+ 304-bit register                                      : 1
+ 36-bit register                                       : 1
+ 684-bit register                                      : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+WARNING:Xst:2677 - Node <sum_0> of sequential type is unconnected in block <FIR>.
+WARNING:Xst:2677 - Node <sum_1> of sequential type is unconnected in block <FIR>.
+WARNING:Xst:2677 - Node <sum_2> of sequential type is unconnected in block <FIR>.
+WARNING:Xst:2677 - Node <sum_3> of sequential type is unconnected in block <FIR>.
+WARNING:Xst:2677 - Node <sum_4> of sequential type is unconnected in block <FIR>.
+WARNING:Xst:2677 - Node <sum_5> of sequential type is unconnected in block <FIR>.
+WARNING:Xst:2677 - Node <sum_6> of sequential type is unconnected in block <FIR>.
+WARNING:Xst:2677 - Node <sum_7> of sequential type is unconnected in block <FIR>.
+WARNING:Xst:2677 - Node <sum_8> of sequential type is unconnected in block <FIR>.
+WARNING:Xst:2677 - Node <sum_9> of sequential type is unconnected in block <FIR>.
+WARNING:Xst:2677 - Node <sum_10> of sequential type is unconnected in block <FIR>.
+WARNING:Xst:2677 - Node <sum_11> of sequential type is unconnected in block <FIR>.
+WARNING:Xst:2677 - Node <sum_12> of sequential type is unconnected in block <FIR>.
+WARNING:Xst:2677 - Node <sum_13> of sequential type is unconnected in block <FIR>.
+WARNING:Xst:2677 - Node <sum_14> of sequential type is unconnected in block <FIR>.
+WARNING:Xst:2677 - Node <sum_15> of sequential type is unconnected in block <FIR>.
+WARNING:Xst:2677 - Node <sum_16> of sequential type is unconnected in block <FIR>.
+WARNING:Xst:2677 - Node <sum_17> of sequential type is unconnected in block <FIR>.
+WARNING:Xst:2677 - Node <sum_18> of sequential type is unconnected in block <FIR>.
+WARNING:Xst:2677 - Node <sum_35> of sequential type is unconnected in block <FIR>.
+
+Synthesizing (advanced) Unit <FIR>.
+The following registers are absorbed into counter <level>: 1 register on signal <level>.
+	The following adders/subtractors are grouped into adder tree <Madd_hasel_zarb[0][35]_hasel_zarb[18][35]_add_63_OUT1> :
+ 	<Madd_n0145> in block <FIR>, 	<Madd_n0148> in block <FIR>, 	<Madd_n0151> in block <FIR>, 	<Madd_n0154> in block <FIR>, 	<Madd_n0157> in block <FIR>, 	<Madd_n0160> in block <FIR>, 	<Madd_n0163> in block <FIR>, 	<Madd_n0166> in block <FIR>, 	<Madd_n0169> in block <FIR>, 	<Madd_n0172> in block <FIR>, 	<Madd_n0175> in block <FIR>, 	<Madd_n0178> in block <FIR>, 	<Madd_n0181> in block <FIR>, 	<Madd_n0184> in block <FIR>, 	<Madd_n0187> in block <FIR>, 	<Madd_n0190> in block <FIR>, 	<Madd_n0193> in block <FIR>, 	<Madd_hasel_zarb[0][35]_hasel_zarb[18][35]_add_63_OUT> in block <FIR>.
+	Found pipelined multiplier on signal <reg_data[9][15]_coef[9][15]_MuLt_34_OUT>:
+		- 1 pipeline level(s) found in a register connected to the multiplier macro output.
+		Pushing register(s) into the multiplier macro.
+	Found pipelined multiplier on signal <reg_data[10][15]_coef[10][15]_MuLt_35_OUT>:
+		- 1 pipeline level(s) found in a register connected to the multiplier macro output.
+		Pushing register(s) into the multiplier macro.
+	Found pipelined multiplier on signal <reg_data[8][15]_coef[8][15]_MuLt_33_OUT>:
+		- 1 pipeline level(s) found in a register connected to the multiplier macro output.
+		Pushing register(s) into the multiplier macro.
+	Found pipelined multiplier on signal <reg_data[18][15]_coef[18][15]_MuLt_43_OUT>:
+		- 1 pipeline level(s) found in a register connected to the multiplier macro output.
+		Pushing register(s) into the multiplier macro.
+	Found pipelined multiplier on signal <reg_data[17][15]_coef[17][15]_MuLt_42_OUT>:
+		- 1 pipeline level(s) found in a register connected to the multiplier macro output.
+		Pushing register(s) into the multiplier macro.
+	Found pipelined multiplier on signal <reg_data[16][15]_coef[16][15]_MuLt_41_OUT>:
+		- 1 pipeline level(s) found in a register connected to the multiplier macro output.
+		Pushing register(s) into the multiplier macro.
+	Found pipelined multiplier on signal <reg_data[15][15]_coef[15][15]_MuLt_40_OUT>:
+		- 1 pipeline level(s) found in a register connected to the multiplier macro output.
+		Pushing register(s) into the multiplier macro.
+	Found pipelined multiplier on signal <reg_data[14][15]_coef[14][15]_MuLt_39_OUT>:
+		- 1 pipeline level(s) found in a register connected to the multiplier macro output.
+		Pushing register(s) into the multiplier macro.
+	Found pipelined multiplier on signal <reg_data[13][15]_coef[13][15]_MuLt_38_OUT>:
+		- 1 pipeline level(s) found in a register connected to the multiplier macro output.
+		Pushing register(s) into the multiplier macro.
+	Found pipelined multiplier on signal <reg_data[12][15]_coef[12][15]_MuLt_37_OUT>:
+		- 1 pipeline level(s) found in a register connected to the multiplier macro output.
+		Pushing register(s) into the multiplier macro.
+	Found pipelined multiplier on signal <reg_data[11][15]_coef[11][15]_MuLt_36_OUT>:
+		- 1 pipeline level(s) found in a register connected to the multiplier macro output.
+		Pushing register(s) into the multiplier macro.
+	Found pipelined multiplier on signal <reg_data[7][15]_coef[7][15]_MuLt_32_OUT>:
+		- 1 pipeline level(s) found in a register connected to the multiplier macro output.
+		Pushing register(s) into the multiplier macro.
+	Found pipelined multiplier on signal <reg_data[6][15]_coef[6][15]_MuLt_31_OUT>:
+		- 1 pipeline level(s) found in a register connected to the multiplier macro output.
+		Pushing register(s) into the multiplier macro.
+	Found pipelined multiplier on signal <reg_data[5][15]_coef[5][15]_MuLt_30_OUT>:
+		- 1 pipeline level(s) found in a register connected to the multiplier macro output.
+		Pushing register(s) into the multiplier macro.
+	Found pipelined multiplier on signal <reg_data[3][15]_coef[3][15]_MuLt_28_OUT>:
+		- 1 pipeline level(s) found in a register connected to the multiplier macro output.
+		Pushing register(s) into the multiplier macro.
+	Found pipelined multiplier on signal <reg_data[4][15]_coef[4][15]_MuLt_29_OUT>:
+		- 1 pipeline level(s) found in a register connected to the multiplier macro output.
+		Pushing register(s) into the multiplier macro.
+	Found pipelined multiplier on signal <reg_data[1][15]_coef[1][15]_MuLt_26_OUT>:
+		- 1 pipeline level(s) found in a register connected to the multiplier macro output.
+		Pushing register(s) into the multiplier macro.
+	Found pipelined multiplier on signal <reg_data[2][15]_coef[2][15]_MuLt_27_OUT>:
+		- 1 pipeline level(s) found in a register connected to the multiplier macro output.
+		Pushing register(s) into the multiplier macro.
+	Found pipelined multiplier on signal <reg_data[0][15]_coef[0][15]_MuLt_25_OUT>:
+		- 1 pipeline level(s) found in a register connected to the multiplier macro output.
+		Pushing register(s) into the multiplier macro.
+INFO:Xst:2385 - HDL ADVISOR - You can improve the performance of the multiplier Mmult_reg_data[9][15]_coef[9][15]_MuLt_34_OUT by adding 1 register level(s).
+INFO:Xst:2385 - HDL ADVISOR - You can improve the performance of the multiplier Mmult_reg_data[10][15]_coef[10][15]_MuLt_35_OUT by adding 1 register level(s).
+INFO:Xst:2385 - HDL ADVISOR - You can improve the performance of the multiplier Mmult_reg_data[8][15]_coef[8][15]_MuLt_33_OUT by adding 1 register level(s).
+INFO:Xst:2385 - HDL ADVISOR - You can improve the performance of the multiplier Mmult_reg_data[18][15]_coef[18][15]_MuLt_43_OUT by adding 1 register level(s).
+INFO:Xst:2385 - HDL ADVISOR - You can improve the performance of the multiplier Mmult_reg_data[17][15]_coef[17][15]_MuLt_42_OUT by adding 1 register level(s).
+INFO:Xst:2385 - HDL ADVISOR - You can improve the performance of the multiplier Mmult_reg_data[16][15]_coef[16][15]_MuLt_41_OUT by adding 1 register level(s).
+INFO:Xst:2385 - HDL ADVISOR - You can improve the performance of the multiplier Mmult_reg_data[15][15]_coef[15][15]_MuLt_40_OUT by adding 1 register level(s).
+INFO:Xst:2385 - HDL ADVISOR - You can improve the performance of the multiplier Mmult_reg_data[14][15]_coef[14][15]_MuLt_39_OUT by adding 1 register level(s).
+INFO:Xst:2385 - HDL ADVISOR - You can improve the performance of the multiplier Mmult_reg_data[13][15]_coef[13][15]_MuLt_38_OUT by adding 1 register level(s).
+INFO:Xst:2385 - HDL ADVISOR - You can improve the performance of the multiplier Mmult_reg_data[12][15]_coef[12][15]_MuLt_37_OUT by adding 1 register level(s).
+INFO:Xst:2385 - HDL ADVISOR - You can improve the performance of the multiplier Mmult_reg_data[11][15]_coef[11][15]_MuLt_36_OUT by adding 1 register level(s).
+INFO:Xst:2385 - HDL ADVISOR - You can improve the performance of the multiplier Mmult_reg_data[7][15]_coef[7][15]_MuLt_32_OUT by adding 1 register level(s).
+INFO:Xst:2385 - HDL ADVISOR - You can improve the performance of the multiplier Mmult_reg_data[6][15]_coef[6][15]_MuLt_31_OUT by adding 1 register level(s).
+INFO:Xst:2385 - HDL ADVISOR - You can improve the performance of the multiplier Mmult_reg_data[5][15]_coef[5][15]_MuLt_30_OUT by adding 1 register level(s).
+INFO:Xst:2385 - HDL ADVISOR - You can improve the performance of the multiplier Mmult_reg_data[3][15]_coef[3][15]_MuLt_28_OUT by adding 1 register level(s).
+INFO:Xst:2385 - HDL ADVISOR - You can improve the performance of the multiplier Mmult_reg_data[4][15]_coef[4][15]_MuLt_29_OUT by adding 1 register level(s).
+INFO:Xst:2385 - HDL ADVISOR - You can improve the performance of the multiplier Mmult_reg_data[1][15]_coef[1][15]_MuLt_26_OUT by adding 1 register level(s).
+INFO:Xst:2385 - HDL ADVISOR - You can improve the performance of the multiplier Mmult_reg_data[2][15]_coef[2][15]_MuLt_27_OUT by adding 1 register level(s).
+INFO:Xst:2385 - HDL ADVISOR - You can improve the performance of the multiplier Mmult_reg_data[0][15]_coef[0][15]_MuLt_25_OUT by adding 1 register level(s).
+Unit <FIR> synthesized (advanced).
+WARNING:Xst:2677 - Node <sum_0> of sequential type is unconnected in block <FIR>.
+WARNING:Xst:2677 - Node <sum_1> of sequential type is unconnected in block <FIR>.
+WARNING:Xst:2677 - Node <sum_2> of sequential type is unconnected in block <FIR>.
+WARNING:Xst:2677 - Node <sum_3> of sequential type is unconnected in block <FIR>.
+WARNING:Xst:2677 - Node <sum_4> of sequential type is unconnected in block <FIR>.
+WARNING:Xst:2677 - Node <sum_5> of sequential type is unconnected in block <FIR>.
+WARNING:Xst:2677 - Node <sum_6> of sequential type is unconnected in block <FIR>.
+WARNING:Xst:2677 - Node <sum_7> of sequential type is unconnected in block <FIR>.
+WARNING:Xst:2677 - Node <sum_8> of sequential type is unconnected in block <FIR>.
+WARNING:Xst:2677 - Node <sum_9> of sequential type is unconnected in block <FIR>.
+WARNING:Xst:2677 - Node <sum_10> of sequential type is unconnected in block <FIR>.
+WARNING:Xst:2677 - Node <sum_11> of sequential type is unconnected in block <FIR>.
+WARNING:Xst:2677 - Node <sum_12> of sequential type is unconnected in block <FIR>.
+WARNING:Xst:2677 - Node <sum_13> of sequential type is unconnected in block <FIR>.
+WARNING:Xst:2677 - Node <sum_14> of sequential type is unconnected in block <FIR>.
+WARNING:Xst:2677 - Node <sum_15> of sequential type is unconnected in block <FIR>.
+WARNING:Xst:2677 - Node <sum_16> of sequential type is unconnected in block <FIR>.
+WARNING:Xst:2677 - Node <sum_17> of sequential type is unconnected in block <FIR>.
+WARNING:Xst:2677 - Node <sum_18> of sequential type is unconnected in block <FIR>.
+WARNING:Xst:2677 - Node <sum_35> of sequential type is unconnected in block <FIR>.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Multipliers                                          : 19
+ 16x10-bit registered multiplier                       : 2
+ 16x11-bit registered multiplier                       : 2
+ 16x13-bit registered multiplier                       : 2
+ 16x14-bit registered multiplier                       : 2
+ 16x15-bit registered multiplier                       : 6
+ 16x16-bit registered multiplier                       : 3
+ 16x6-bit registered multiplier                        : 2
+# Adder Trees                                          : 1
+ 36-bit / 19-inputs adder tree                         : 1
+# Counters                                             : 1
+ 2-bit up counter                                      : 1
+# Registers                                            : 336
+ Flip-Flops                                            : 336
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1710 - FF/Latch <Mmult_reg_data[18][15]_coef[18][15]_MuLt_43_OUT_21> (without init value) has a constant value of 0 in block <FIR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Mmult_reg_data[0][15]_coef[0][15]_MuLt_25_OUT_21> (without init value) has a constant value of 0 in block <FIR>. This FF/Latch will be trimmed during the optimization process.
+
+Optimizing unit <FIR> ...
+INFO:Xst:2261 - The FF/Latch <Mmult_reg_data[18][15]_coef[18][15]_MuLt_43_OUT_1> in Unit <FIR> is equivalent to the following FF/Latch, which will be removed : <Mmult_reg_data[18][15]_coef[18][15]_MuLt_43_OUT_0> 
+INFO:Xst:2261 - The FF/Latch <Mmult_reg_data[0][15]_coef[0][15]_MuLt_25_OUT_1> in Unit <FIR> is equivalent to the following FF/Latch, which will be removed : <Mmult_reg_data[0][15]_coef[0][15]_MuLt_25_OUT_0> 
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block FIR, actual ratio is 25.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 405
+ Flip-Flops                                            : 405
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : FIR.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 2071
+#      GND                         : 1
+#      INV                         : 2
+#      LUT1                        : 4
+#      LUT2                        : 447
+#      LUT3                        : 322
+#      LUT4                        : 299
+#      LUT5                        : 13
+#      LUT6                        : 28
+#      MUXCY                       : 479
+#      MUXF7                       : 1
+#      VCC                         : 1
+#      XORCY                       : 474
+# FlipFlops/Latches                : 405
+#      FDE                         : 403
+#      FDR                         : 2
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 48
+#      IBUF                        : 32
+#      OBUF                        : 16
+# DSPs                             : 16
+#      DSP48A1                     : 16
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx9tqg144-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:             405  out of  11440     3%  
+ Number of Slice LUTs:                 1115  out of   5720    19%  
+    Number used as Logic:              1115  out of   5720    19%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:   1137
+   Number with an unused Flip Flop:     732  out of   1137    64%  
+   Number with an unused LUT:            22  out of   1137     1%  
+   Number of fully used LUT-FF pairs:   383  out of   1137    33%  
+   Number of unique control sets:         5
+
+IO Utilization: 
+ Number of IOs:                          49
+ Number of bonded IOBs:                  49  out of    102    48%  
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                1  out of     16     6%  
+ Number of DSP48A1s:                     16  out of     16   100%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 421   |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 9.084ns (Maximum Frequency: 110.082MHz)
+   Minimum input arrival time before clock: 8.187ns
+   Maximum output required time after clock: 3.597ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 9.084ns (frequency: 110.082MHz)
+  Total number of paths / destination ports: 76736332 / 1114
+-------------------------------------------------------------------------
+Delay:               9.084ns (Levels of Logic = 42)
+  Source:            Mmult_reg_data[10][15]_coef[10][15]_MuLt_35_OUT (DSP)
+  Destination:       sum_34 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: Mmult_reg_data[10][15]_coef[10][15]_MuLt_35_OUT to sum_34
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     DSP48A1:CLK->M0       2   1.227   0.845  Mmult_reg_data[10][15]_coef[10][15]_MuLt_35_OUT (n0071[683:0]<360>)
+     LUT3:I0->O            1   0.205   0.580  ADDERTREE_INTERNAL_Madd10 (ADDERTREE_INTERNAL_Madd10)
+     LUT4:I3->O            1   0.205   0.000  ADDERTREE_INTERNAL_Madd10_lut<0>1 (ADDERTREE_INTERNAL_Madd10_lut<0>1)
+     MUXCY:S->O            1   0.172   0.000  ADDERTREE_INTERNAL_Madd10_cy<0>_0 (ADDERTREE_INTERNAL_Madd10_cy<0>1)
+     MUXCY:CI->O           1   0.019   0.000  ADDERTREE_INTERNAL_Madd10_cy<0>_1 (ADDERTREE_INTERNAL_Madd10_cy<0>2)
+     MUXCY:CI->O           1   0.019   0.000  ADDERTREE_INTERNAL_Madd10_cy<0>_2 (ADDERTREE_INTERNAL_Madd10_cy<0>3)
+     MUXCY:CI->O           1   0.019   0.000  ADDERTREE_INTERNAL_Madd10_cy<0>_3 (ADDERTREE_INTERNAL_Madd10_cy<0>4)
+     MUXCY:CI->O           1   0.019   0.000  ADDERTREE_INTERNAL_Madd10_cy<0>_4 (ADDERTREE_INTERNAL_Madd10_cy<0>5)
+     MUXCY:CI->O           1   0.019   0.000  ADDERTREE_INTERNAL_Madd10_cy<0>_5 (ADDERTREE_INTERNAL_Madd10_cy<0>6)
+     MUXCY:CI->O           1   0.019   0.000  ADDERTREE_INTERNAL_Madd10_cy<0>_6 (ADDERTREE_INTERNAL_Madd10_cy<0>7)
+     MUXCY:CI->O           1   0.019   0.000  ADDERTREE_INTERNAL_Madd10_cy<0>_7 (ADDERTREE_INTERNAL_Madd10_cy<0>8)
+     MUXCY:CI->O           1   0.019   0.000  ADDERTREE_INTERNAL_Madd10_cy<0>_8 (ADDERTREE_INTERNAL_Madd10_cy<0>9)
+     MUXCY:CI->O           1   0.019   0.000  ADDERTREE_INTERNAL_Madd10_cy<0>_9 (ADDERTREE_INTERNAL_Madd10_cy<0>10)
+     MUXCY:CI->O           1   0.019   0.000  ADDERTREE_INTERNAL_Madd10_cy<0>_10 (ADDERTREE_INTERNAL_Madd10_cy<0>11)
+     MUXCY:CI->O           1   0.019   0.000  ADDERTREE_INTERNAL_Madd10_cy<0>_11 (ADDERTREE_INTERNAL_Madd10_cy<0>12)
+     MUXCY:CI->O           1   0.019   0.000  ADDERTREE_INTERNAL_Madd10_cy<0>_12 (ADDERTREE_INTERNAL_Madd10_cy<0>13)
+     MUXCY:CI->O           1   0.019   0.000  ADDERTREE_INTERNAL_Madd10_cy<0>_13 (ADDERTREE_INTERNAL_Madd10_cy<0>14)
+     MUXCY:CI->O           1   0.019   0.000  ADDERTREE_INTERNAL_Madd10_cy<0>_14 (ADDERTREE_INTERNAL_Madd10_cy<0>15)
+     MUXCY:CI->O           1   0.019   0.000  ADDERTREE_INTERNAL_Madd10_cy<0>_15 (ADDERTREE_INTERNAL_Madd10_cy<0>16)
+     MUXCY:CI->O           1   0.019   0.000  ADDERTREE_INTERNAL_Madd10_cy<0>_16 (ADDERTREE_INTERNAL_Madd10_cy<0>17)
+     MUXCY:CI->O           1   0.019   0.000  ADDERTREE_INTERNAL_Madd10_cy<0>_17 (ADDERTREE_INTERNAL_Madd10_cy<0>18)
+     MUXCY:CI->O           1   0.019   0.000  ADDERTREE_INTERNAL_Madd10_cy<0>_18 (ADDERTREE_INTERNAL_Madd10_cy<0>19)
+     MUXCY:CI->O           1   0.019   0.000  ADDERTREE_INTERNAL_Madd10_cy<0>_19 (ADDERTREE_INTERNAL_Madd10_cy<0>20)
+     MUXCY:CI->O           1   0.019   0.000  ADDERTREE_INTERNAL_Madd10_cy<0>_20 (ADDERTREE_INTERNAL_Madd10_cy<0>21)
+     MUXCY:CI->O           1   0.019   0.000  ADDERTREE_INTERNAL_Madd10_cy<0>_21 (ADDERTREE_INTERNAL_Madd10_cy<0>22)
+     MUXCY:CI->O           1   0.019   0.000  ADDERTREE_INTERNAL_Madd10_cy<0>_22 (ADDERTREE_INTERNAL_Madd10_cy<0>23)
+     MUXCY:CI->O           1   0.019   0.000  ADDERTREE_INTERNAL_Madd10_cy<0>_23 (ADDERTREE_INTERNAL_Madd10_cy<0>24)
+     MUXCY:CI->O           1   0.019   0.000  ADDERTREE_INTERNAL_Madd10_cy<0>_24 (ADDERTREE_INTERNAL_Madd10_cy<0>25)
+     MUXCY:CI->O           1   0.019   0.000  ADDERTREE_INTERNAL_Madd10_cy<0>_25 (ADDERTREE_INTERNAL_Madd10_cy<0>26)
+     MUXCY:CI->O           1   0.019   0.000  ADDERTREE_INTERNAL_Madd10_cy<0>_26 (ADDERTREE_INTERNAL_Madd10_cy<0>27)
+     MUXCY:CI->O           1   0.019   0.000  ADDERTREE_INTERNAL_Madd10_cy<0>_27 (ADDERTREE_INTERNAL_Madd10_cy<0>28)
+     XORCY:CI->O           2   0.180   0.617  ADDERTREE_INTERNAL_Madd10_xor<0>_28 (ADDERTREE_INTERNAL_Madd_2910)
+     LUT3:I2->O            1   0.205   0.580  ADDERTREE_INTERNAL_Madd1238 (ADDERTREE_INTERNAL_Madd1239)
+     LUT4:I3->O            1   0.205   0.000  ADDERTREE_INTERNAL_Madd12_lut<0>30 (ADDERTREE_INTERNAL_Madd12_lut<0>30)
+     MUXCY:S->O            1   0.172   0.000  ADDERTREE_INTERNAL_Madd12_cy<0>_29 (ADDERTREE_INTERNAL_Madd12_cy<0>30)
+     XORCY:CI->O           1   0.180   0.580  ADDERTREE_INTERNAL_Madd12_xor<0>_30 (ADDERTREE_INTERNAL_Madd_3114)
+     LUT2:I1->O            1   0.205   0.000  ADDERTREE_INTERNAL_Madd16_lut<31> (ADDERTREE_INTERNAL_Madd16_lut<31>)
+     MUXCY:S->O            1   0.172   0.000  ADDERTREE_INTERNAL_Madd16_cy<31> (ADDERTREE_INTERNAL_Madd16_cy<31>)
+     XORCY:CI->O           2   0.180   0.617  ADDERTREE_INTERNAL_Madd16_xor<32> (ADDERTREE_INTERNAL_Madd_3217)
+     LUT3:I2->O            1   0.205   0.580  ADDERTREE_INTERNAL_Madd1732 (ADDERTREE_INTERNAL_Madd1733)
+     LUT4:I3->O            1   0.205   0.000  ADDERTREE_INTERNAL_Madd17_lut<0>33 (ADDERTREE_INTERNAL_Madd17_lut<0>33)
+     MUXCY:S->O            0   0.172   0.000  ADDERTREE_INTERNAL_Madd17_cy<0>_32 (ADDERTREE_INTERNAL_Madd17_cy<0>33)
+     XORCY:CI->O           1   0.180   0.000  ADDERTREE_INTERNAL_Madd17_xor<0>_33 (ADDERTREE_INTERNAL_Madd_3417)
+     FDE:D                     0.102          sum_34
+    ----------------------------------------
+    Total                      9.084ns (4.685ns logic, 4.399ns route)
+                                       (51.6% logic, 48.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 16480 / 1029
+-------------------------------------------------------------------------
+Offset:              8.187ns (Levels of Logic = 4)
+  Source:            reset<7> (PAD)
+  Destination:       reg_data_0_0 (FF)
+  Destination Clock: clk rising
+
+  Data Path: reset<7> to reg_data_0_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   1.222   0.944  reset_7_IBUF (reset_7_IBUF)
+     LUT6:I0->O            1   0.203   0.944  out1 (out)
+     LUT6:I0->O          309   0.203   2.072  out3 (reset[15]_reduce_or_21_o)
+     LUT3:I2->O          320   0.205   2.072  _n0210_inv1 (_n0210_inv)
+     FDE:CE                    0.322          reg_data_0_0
+    ----------------------------------------
+    Total                      8.187ns (2.155ns logic, 6.032ns route)
+                                       (26.3% logic, 73.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 16 / 16
+-------------------------------------------------------------------------
+Offset:              3.597ns (Levels of Logic = 1)
+  Source:            data_out_15 (FF)
+  Destination:       data_out<15> (PAD)
+  Source Clock:      clk rising
+
+  Data Path: data_out_15 to data_out<15>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              1   0.447   0.579  data_out_15 (data_out_15)
+     OBUF:I->O                 2.571          data_out_15_OBUF (data_out<15>)
+    ----------------------------------------
+    Total                      3.597ns (3.018ns logic, 0.579ns route)
+                                       (83.9% logic, 16.1% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |    9.084|         |         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 9.00 secs
+Total CPU time to Xst completion: 8.92 secs
+ 
+--> 
+
+Total memory usage is 4557688 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   44 (   0 filtered)
+Number of infos    :   21 (   0 filtered)
+
